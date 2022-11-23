@@ -14,7 +14,7 @@ export class User {
     }
 
     get brithDateStr(): String {
-        return this.birthDate.toLocaleDateString();
+        return this.birthDate.toISOString();
     }
 
     get balanceNum(): number {

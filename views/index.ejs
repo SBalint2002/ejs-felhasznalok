@@ -6,6 +6,7 @@
     <style>
       .szelesseg { width: 100px;text-align: center;}
      </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <table>
@@ -20,7 +21,13 @@
         <% for (let user of users) { %>
           <tr>
               <td class="szelesseg"><%= user.nameStr %></td>
-              <td class="szelesseg"><%= user.genderStr %></td>
+              <td class="szelesseg">
+                <i class="<% if (user.genderStr = "férfi") { %>
+                  <%= "fa fa-mars" %> 
+                <%} else { %>
+                  <%= "fa fa-venus" %> 
+                <% } %> "></i>
+              </td>
               <td class="szelesseg"><%= user.birthDateStr %></td>
               <td class="szelesseg"><%= user.balanceNum %></td>
               <td class="szelesseg"><%= user.active %></td>
