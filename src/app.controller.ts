@@ -17,6 +17,6 @@ export class AppController {
   @Get()
   @Render('index')
   root() {
-    return { users: felhlista };
+    return { users: felhlista.filter(x => x.isActive)};
   }
 }
