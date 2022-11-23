@@ -2,9 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>App</title>
+    <title>users</title>
+    <style>
+      .szelesseg { width: 100px;text-align: center;}
+     </style>
   </head>
   <body>
-    <%= message %>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth date</th>
+        <th>Balance</th>
+        <th>Is active</th>
+      </thead>
+      <tbody>
+        <% for (let user of users) { %>
+          <tr>
+              <td class="szelesseg"><%= user.nameStr %></td>
+              <td class="szelesseg"><%= user.genderStr %></td>
+              <td class="szelesseg"><%= user.birthDateStr %></td>
+              <td class="szelesseg"><%= user.balanceNum %></td>
+              <td class="szelesseg"><%= user.active %></td>
+          </tr>
+      <% } %>
+      </tbody>
+    </table>
   </body>
 </html>
