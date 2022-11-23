@@ -28,7 +28,11 @@
                   <%= "fa fa-venus" %> 
                 <% } %> "></i>
               </td>
-              <td class="szelesseg"><%= user.birthDateStr %></td>
+              <td class="szelesseg" title="<% if (user.birthDateYear < 2000) { %>
+                <%= "jogosult a kedvezményre" %> 
+              <%} else { %>
+                <%= "nem jogosult a kedvezményre" %> 
+              <% } %> "><%= user.birthDateYear + "-" + user.birthDateMonth + "-" + user.birthDateDay %></td>
               <td class="szelesseg"><%= user.balanceNum %></td>
               <td class="szelesseg"><%= user.active %></td>
           </tr>

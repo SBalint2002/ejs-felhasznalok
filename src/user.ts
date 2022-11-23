@@ -13,8 +13,20 @@ export class User {
         return this.gender;
     }
 
-    get brithDateStr(): String {
-        return this.birthDate.toISOString();
+    get brithDateStr(): string {
+        return this.birthDate.toUTCString();
+    }
+
+    get birthDateYear(): number{
+        return this.birthDate.getFullYear();
+    }
+
+    get birthDateMonth(): number{
+        return this.birthDate.getMonth()+1;
+    }
+
+    get birthDateDay(): number{
+        return this.birthDate.getDate();
     }
 
     get balanceNum(): number {
