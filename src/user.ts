@@ -1,6 +1,6 @@
 export class User {
     name: string;
-    gender: string;
+    gender: boolean;
     birthDate: Date;
     balance: number;
     isActive: boolean;
@@ -9,7 +9,7 @@ export class User {
         return this.name;
     }
 
-    get genderStr(): string {
+    get genderStr(): boolean {
         return this.gender;
     }
 
@@ -37,7 +37,7 @@ export class User {
         return this.isActive ? "Active" : "Inactive";
     }
 
-    constructor(name: string, gender: string, birthDate: Date, balance: number, isActive: boolean) {
+    constructor(name: string, gender: boolean, birthDate: Date, balance: number, isActive: boolean) {
         this.name = name;
         this.gender = gender;
         this.birthDate = birthDate;
