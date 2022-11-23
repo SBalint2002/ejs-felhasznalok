@@ -5,6 +5,9 @@
     <title>users</title>
     <style>
       .szelesseg { width: 100px;text-align: center;}
+      .piros { color: red;}
+      .kek { color: blue;}
+      .zold { color: green;}
      </style>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -33,7 +36,13 @@
               <%} else { %>
                 <%= "nem jogosult a kedvezményre" %> 
               <% } %> "><%= user.birthDateYear + "-" + user.birthDateMonth + "-" + user.birthDateDay %></td>
-              <td class="szelesseg"><%= user.balanceNum %></td>
+              <td class="szelesseg"><strong class="<<% if (user.balanceNum > 0) { %>
+                <%= "zold" %> 
+              <%} else if(user.balanceNum < 0){ %>
+                <%= "piros" %> 
+              <% } else {%>
+                <%= "kek" %>
+              <% } %> "><%= user.balanceNum %></strong></td>
               <td class="szelesseg"><%= user.active %></td>
           </tr>
       <% } %>
